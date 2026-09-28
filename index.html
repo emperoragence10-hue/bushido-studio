@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bushido Studio — Vidéos UGC ultra-réalistes générées par IA, livrées en 48h</title>
+  <meta name="description" content="Bushido Studio crée des vidéos publicitaires UGC ultra-réalistes générées par IA pour les marques e-commerce, sans casting ni tournage, livrées en 48h." />
+
+  <!-- Favicon : symbole du logo Bushido -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tailwind.css"/>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Sans JavaScript, le contenu reste visible (les animations au scroll sont neutralisées) -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      #mobile-cta { display: none; }
+    </style>
+  </noscript>
+</head>
+
+<body class="bg-bushido-black text-white font-body antialiased">
+
+  <!-- Grain filmique : texture fixe au-dessus du fond noir -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION (sticky)
+  ============================================================= -->
+  <header id="site-header" class="sticky top-0 z-40 bg-bushido-black/95 border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Logo — version blanche sur fond sombre. Fichier : assets/logo-bushido-blanc.png -->
+      <a href="#" aria-label="Bushido Studio — retour en haut" class="flex items-center">
+        <img src="assets/logo-bushido-blanc.png" alt="Bushido Studio"
+          width="460" height="110" class="h-7 sm:h-9 w-auto" />
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-bushido-gray">
+        <a href="#realisations" class="hover:text-white transition-colors">Réalisations</a>
+        <a href="#process" class="hover:text-white transition-colors">Comment ça marche</a>
+        <a href="#etudes-de-cas" class="hover:text-white transition-colors">Études de cas</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </nav>
+
+      <div class="hidden lg:block">
+        <a href="#tarifs" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white text-sm font-semibold transition-colors">
+          Voir les tarifs
+        </a>
+      </div>
+
+      <!-- Bouton menu mobile -->
+      <button id="mobile-menu-btn" aria-expanded="false" aria-label="Ouvrir le menu"
+        class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-white/10 text-white">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Nav mobile -->
+    <div id="mobile-menu" class="lg:hidden border-t border-white/5 bg-bushido-black">
+      <nav class="flex flex-col px-4 sm:px-6 py-4 gap-1 text-sm font-medium text-bushido-gray">
+        <a href="#realisations" class="py-2.5 hover:text-white transition-colors">Réalisations</a>
+        <a href="#process" class="py-2.5 hover:text-white transition-colors">Comment ça marche</a>
+        <a href="#etudes-de-cas" class="py-2.5 hover:text-white transition-colors">Études de cas</a>
+        <a href="#faq" class="py-2.5 hover:text-white transition-colors">FAQ</a>
+        <a href="#tarifs" class="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-lg bg-bushido-red text-white text-sm font-semibold">
+          Voir les tarifs
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         1. HERO
+    ============================================================= -->
+    <section id="hero" class="relative overflow-hidden pt-14 sm:pt-20 pb-16 sm:pb-24">
+      <!-- Glow décoratif -->
+      <div class="pointer-events-none absolute top-[-10%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-bushido-red/20 blur-[140px] rounded-full"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+
+        <!-- Micro-preuve -->
+        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mb-6">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bushido-card border border-white/10 text-xs sm:text-sm font-medium">
+            <span class="w-2 h-2 rounded-full bg-bushido-red pulse-dot"></span>
+            Plus que 5 places cette semaine
+          </span>
+          <span class="text-xs sm:text-sm text-bushido-gray font-medium">
+            N°1 sur ComeUp · +140 marques accompagnées
+          </span>
+        </div>
+
+        <h1 class="reveal reveal-delay-1 font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+          Des vidéos UGC <span class="text-gradient-red">ultra-réalistes</span> qui boostent tes conversions.
+          <span class="block mt-2">Livrées en 48h.</span>
+        </h1>
+
+        <p class="reveal reveal-delay-2 mt-6 text-base sm:text-lg text-bushido-gray max-w-2xl mx-auto leading-relaxed">
+          On génère par IA des vidéos publicitaires si réalistes qu'on les distingue à peine d'un tournage humain.
+          Sans casting, sans studio, sans tournage — juste des créatives qui convertissent, prêtes à diffuser.
+        </p>
+
+        <div class="reveal reveal-delay-3 mt-9 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a href="#tarifs"
+            class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm sm:text-base transition-colors shadow-lg shadow-bushido-red/20">
+            Voir les tarifs
+          </a>
+        </div>
+
+        <!-- Bandeau de preuve (chiffres animés au scroll) -->
+        <div class="reveal reveal-delay-4 mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm text-bushido-gray font-medium">
+          <span class="inline-flex items-center gap-2">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" aria-hidden="true">
+              <path d="M7 4h10v5a5 5 0 0 1-10 0V4z" stroke-linejoin="round"/>
+              <path d="M7 6H4.5A2.5 2.5 0 0 0 7 10.5M17 6h2.5A2.5 2.5 0 0 1 17 10.5" stroke-linecap="round"/>
+              <path d="M12 14v3.5M9 21h6M9.5 21l.6-3.5h3.8l.6 3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            N°1 sur ComeUp
+          </span>
+          <span class="hidden sm:block w-px h-4 bg-white/10"></span>
+          <span>
+            <span class="text-white font-bold tabular">+<span data-count-to="6000">0</span></span> vidéos produites
+          </span>
+          <span class="hidden sm:block w-px h-4 bg-white/10"></span>
+          <span>
+            <span class="text-white font-bold tabular">+<span data-count-to="140">0</span></span> marques accompagnées
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BANDEAU MARQUEE (formats + chiffres clés, défilement continu)
+    ============================================================= -->
+    <section aria-label="Formats et chiffres clés" class="py-5 border-y border-white/5 bg-bushido-card/30">
+      <div class="marquee">
+        <div class="marquee-track">
+          <!-- Groupe 1 -->
+          <div class="marquee-group">
+            <span class="marquee-item accent">N°1 sur ComeUp</span><span class="marquee-sep"></span>
+            <span class="marquee-item">UGC</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Unboxing</span><span class="marquee-sep"></span>
+            <span class="marquee-item accent">+6 000 vidéos produites</span><span class="marquee-sep"></span>
+            <span class="marquee-item">ASMR produit</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Démonstration</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Storytelling</span><span class="marquee-sep"></span>
+            <span class="marquee-item accent">+140 marques accompagnées</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Livré en 48h</span><span class="marquee-sep"></span>
+          </div>
+          <!-- Groupe 2 : copie identique pour la boucle sans saut -->
+          <div class="marquee-group" aria-hidden="true">
+            <span class="marquee-item accent">N°1 sur ComeUp</span><span class="marquee-sep"></span>
+            <span class="marquee-item">UGC</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Unboxing</span><span class="marquee-sep"></span>
+            <span class="marquee-item accent">+6 000 vidéos produites</span><span class="marquee-sep"></span>
+            <span class="marquee-item">ASMR produit</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Démonstration</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Storytelling</span><span class="marquee-sep"></span>
+            <span class="marquee-item accent">+140 marques accompagnées</span><span class="marquee-sep"></span>
+            <span class="marquee-item">Livré en 48h</span><span class="marquee-sep"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. MUR DE RÉALISATIONS
+    ============================================================= -->
+    <section id="realisations" class="py-16 sm:py-24 section-glow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            <span class="text-bushido-red tabular">+<span data-count-to="140">0</span> marques</span> e-commerce scalent déjà leurs pubs avec Bushido Studio.
+          </h2>
+        </div>
+
+        <!-- Mur de réalisations — vidéos réelles (survol = aperçu muet, clic = lightbox) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div class="video-card reveal" data-label="UGC — Bushido Studio" data-video-src="assets/videos/UGC_01.mp4">
+            <img src="assets/videos/posters/UGC_01.jpg" alt="Aperçu vidéo UGC" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">UGC</p>
+            </div>
+          </div>
+          <div class="video-card reveal reveal-delay-1" data-label="Unboxing — Bushido Studio" data-video-src="assets/videos/Unboxing_01.mp4">
+            <img src="assets/videos/posters/Unboxing_01.jpg" alt="Aperçu vidéo Unboxing" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">Unboxing</p>
+            </div>
+          </div>
+          <div class="video-card reveal reveal-delay-2" data-label="ASMR — Bushido Studio" data-video-src="assets/videos/ASMR_01.mp4">
+            <img src="assets/videos/posters/ASMR_01.jpg" alt="Aperçu vidéo ASMR" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">ASMR</p>
+            </div>
+          </div>
+          <div class="video-card reveal reveal-delay-3" data-label="Démonstration — Bushido Studio" data-video-src="assets/videos/Demo_01.mp4">
+            <img src="assets/videos/posters/Demo_01.jpg" alt="Aperçu vidéo Démonstration" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">Démonstration</p>
+            </div>
+          </div>
+          <div class="video-card reveal" data-label="UGC — Bushido Studio" data-video-src="assets/videos/UGC_02.mp4">
+            <img src="assets/videos/posters/UGC_02.jpg" alt="Aperçu vidéo UGC" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">UGC</p>
+            </div>
+          </div>
+          <div class="video-card reveal reveal-delay-1" data-label="Storytelling — Bushido Studio" data-video-src="assets/videos/Storytelling_01.mp4">
+            <img src="assets/videos/posters/Storytelling_01.jpg" alt="Aperçu vidéo Storytelling" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">Storytelling</p>
+            </div>
+          </div>
+          <div class="video-card reveal reveal-delay-2 hidden sm:block" data-label="Démonstration — Bushido Studio" data-video-src="assets/videos/Demo_02.mp4">
+            <img src="assets/videos/posters/Demo_02.jpg" alt="Aperçu vidéo Démonstration" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">Démonstration</p>
+            </div>
+          </div>
+          <div class="video-card reveal reveal-delay-3 hidden lg:block" data-label="UGC — Bushido Studio" data-video-src="assets/videos/UGC_03.mp4">
+            <img src="assets/videos/posters/UGC_03.jpg" alt="Aperçu vidéo UGC" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">UGC</p>
+            </div>
+          </div>
+          <div class="video-card reveal hidden lg:block" data-label="Unboxing — Bushido Studio" data-video-src="assets/videos/Unboxing_02.mp4">
+            <img src="assets/videos/posters/Unboxing_02.jpg" alt="Aperçu vidéo Unboxing" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-3 z-10 pointer-events-none bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-xs font-semibold text-white/90">Unboxing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal mt-10 sm:mt-14 text-center">
+          <a href="#tarifs" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm sm:text-base transition-colors">
+            Voir les tarifs
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         3. BÉNÉFICES + PROMESSE
+    ============================================================= -->
+    <section id="benefices" class="py-16 sm:py-24 bg-bushido-card/40">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="reveal font-heading font-bold text-2xl sm:text-3xl lg:text-4xl leading-snug tracking-tight">
+          Le vrai avantage de l'IA aujourd'hui, c'est le niveau de <span class="text-bushido-red">réalisme</span> atteint.
+        </p>
+        <p class="reveal reveal-delay-1 mt-5 text-bushido-gray text-base sm:text-lg leading-relaxed">
+          Chez Bushido Studio, on a développé un process unique qui combine les technologies de génération vidéo
+          les plus avancées pour un rendu ultra-réaliste — naturel, dynamique, crédible.
+        </p>
+
+        <!-- Badges bénéfices (icônes SVG custom) -->
+        <div class="reveal reveal-delay-2 mt-10 flex flex-wrap items-center justify-center gap-3">
+          <span class="premium-card inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bushido-card border border-white/10 text-sm font-medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" aria-hidden="true">
+              <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.5"/>
+            </svg>
+            Scroll-stopping
+          </span>
+          <span class="premium-card inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bushido-card border border-white/10 text-sm font-medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 7l5.5 5.5L13 8l8 8"/><path d="M21 12.5V16h-3.5"/>
+            </svg>
+            Baisse ton CPA
+          </span>
+          <span class="premium-card inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bushido-card border border-white/10 text-sm font-medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10 3v6.5L4.6 18a2 2 0 0 0 1.7 3h11.4a2 2 0 0 0 1.7-3L14 9.5V3"/><path d="M8.5 3h7M7 15h10"/>
+            </svg>
+            Teste 10x plus d'angles
+          </span>
+          <span class="premium-card inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bushido-card border border-white/10 text-sm font-medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5"/><path d="M5.5 20a6.8 6.8 0 0 1 10.5-5.2"/><path d="M4 4l16 16"/>
+            </svg>
+            Sans casting
+          </span>
+          <span class="premium-card inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bushido-card border border-white/10 text-sm font-medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E10600" aria-hidden="true">
+              <path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/>
+            </svg>
+            Livré en 48h
+          </span>
+          <span class="premium-card inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bushido-card border border-white/10 text-sm font-medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/>
+            </svg>
+            Prêt pour Meta &amp; TikTok
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline sabre"></div></div>
+
+    <!-- ============================================================
+         4. COMPARAISON — NOUS VS LES AUTRES
+    ============================================================= -->
+    <section id="comparaison" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Pourquoi les marques nous préfèrent aux créateurs UGC classiques
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Colonne gauche : classique -->
+          <div class="reveal premium-card rounded-2xl bg-bushido-card border border-white/10 p-6 sm:p-8 opacity-80">
+            <h3 class="font-heading font-bold text-lg text-bushido-gray mb-6">UGC créateurs / agence classique</h3>
+            <ul class="space-y-4 text-sm sm:text-base text-bushido-gray">
+              <li class="flex items-start gap-3"><span class="mt-0.5">✕</span> 2 à 4 semaines de délai</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5">✕</span> $80–150 / vidéo créateur</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5">✕</span> Casting, brief, tournage, montage</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5">✕</span> 1 créateur = 1 vidéo</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5">✕</span> Dépendant des disponibilités</li>
+            </ul>
+          </div>
+
+          <!-- Colonne droite : Bushido -->
+          <div class="reveal reveal-delay-1 premium-card spotlight compare-highlight rounded-2xl bg-bushido-card border border-bushido-red/40 p-6 sm:p-8 relative">
+            <span class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-bushido-red text-xs font-bold">Bushido Studio</span>
+            <h3 class="font-heading font-bold text-lg text-white mb-6">Bushido Studio</h3>
+            <ul class="space-y-4 text-sm sm:text-base text-white">
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-bushido-red font-bold">✓</span> Livraison en 48h</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-bushido-red font-bold">✓</span> À partir de $50</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-bushido-red font-bold">✓</span> Zéro tournage, process sans friction</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-bushido-red font-bold">✓</span> Autant d'angles et de variations que tu veux</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-bushido-red font-bold">✓</span> Rendu ultra-réaliste, à l'échelle</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal mt-10 text-center">
+          <a href="#tarifs" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm sm:text-base transition-colors">
+            Voir les tarifs
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         5. CE QUE CONTIENT CHAQUE VIDÉO
+    ============================================================= -->
+    <section id="inclus" class="py-16 sm:py-24 bg-bushido-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Tout ce que contient chaque vidéo
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="reveal premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-6">
+            <div class="w-11 h-11 rounded-lg bg-bushido-red/15 flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-base mb-2">Script publicitaire inclus</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Hook + angle pensés conversion, rédigés par notre équipe copywriting.</p>
+          </div>
+          <div class="reveal reveal-delay-1 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-6">
+            <div class="w-11 h-11 rounded-lg bg-bushido-red/15 flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-base mb-2">Rendu ultra-réaliste</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Naturel, dynamique, crédible — indiscernable d'un vrai tournage.</p>
+          </div>
+          <div class="reveal reveal-delay-2 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-6">
+            <div class="w-11 h-11 rounded-lg bg-bushido-red/15 flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-base mb-2">Format au choix</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">UGC · Unboxing · ASMR produit · Démonstration · Storytelling.</p>
+          </div>
+          <div class="reveal premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-6">
+            <div class="w-11 h-11 rounded-lg bg-bushido-red/15 flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-base mb-2">Optimisé multi-plateformes</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Facebook Ads · TikTok Ads · Instagram Ads.</p>
+          </div>
+          <div class="reveal reveal-delay-1 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-6">
+            <div class="w-11 h-11 rounded-lg bg-bushido-red/15 flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-base mb-2">Durée 30–60s</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Le format qui performe le mieux en paid social.</p>
+          </div>
+          <div class="reveal reveal-delay-2 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-6">
+            <div class="w-11 h-11 rounded-lg bg-bushido-red/15 flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linejoin="round"><path d="M4 20l4-1 10-10-3-3L5 16l-1 4z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-base mb-2">Retouche incluse</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">On ajuste jusqu'à validation complète de ta part.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         CTA TRANSVERSAL 1
+    ============================================================= -->
+    <section class="py-12 sm:py-14">
+      <div class="reveal premium-card spotlight max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-gradient-to-r from-bushido-red/10 via-bushido-card to-bushido-card border border-white/10 p-6 sm:p-8">
+        <div class="text-center sm:text-left">
+          <p class="font-heading font-bold text-lg sm:text-xl">Plus que 5 places cette semaine</p>
+          <p class="text-sm text-bushido-gray mt-1">+140 marques nous font déjà confiance pour leurs créatives.</p>
+        </div>
+        <div class="flex gap-3 shrink-0">
+          <a href="#tarifs" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm transition-colors">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline sabre"></div></div>
+
+    <!-- ============================================================
+         6. PORTFOLIO FILTRABLE
+    ============================================================= -->
+    <section id="portfolio" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-10">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Nos dernières réalisations
+          </h2>
+        </div>
+
+        <!-- Filtres -->
+        <div class="reveal flex flex-wrap items-center justify-center gap-2.5 mb-10 sm:mb-14">
+          <button class="portfolio-filter-btn px-4 py-2 rounded-full text-sm font-semibold border bg-bushido-red text-white border-bushido-red transition-colors" data-filter="all">Tout</button>
+          <button class="portfolio-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-[#2a2a2a] text-bushido-gray hover:text-white transition-colors" data-filter="ugc">UGC</button>
+          <button class="portfolio-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-[#2a2a2a] text-bushido-gray hover:text-white transition-colors" data-filter="unboxing">Unboxing</button>
+          <button class="portfolio-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-[#2a2a2a] text-bushido-gray hover:text-white transition-colors" data-filter="asmr">ASMR</button>
+          <button class="portfolio-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-[#2a2a2a] text-bushido-gray hover:text-white transition-colors" data-filter="demonstration">Démonstration</button>
+          <button class="portfolio-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-[#2a2a2a] text-bushido-gray hover:text-white transition-colors" data-filter="storytelling">Storytelling</button>
+        </div>
+
+        <!-- Portfolio filtrable — vidéos réelles par catégorie -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div class="portfolio-item video-card reveal" data-category="ugc" data-label="UGC — Bushido Studio" data-video-src="assets/videos/UGC_01.mp4">
+            <img src="assets/videos/posters/UGC_01.jpg" alt="Aperçu vidéo UGC" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">UGC</div>
+          </div>
+          <div class="portfolio-item video-card reveal reveal-delay-1" data-category="ugc" data-label="UGC — Bushido Studio" data-video-src="assets/videos/UGC_02.mp4">
+            <img src="assets/videos/posters/UGC_02.jpg" alt="Aperçu vidéo UGC" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">UGC</div>
+          </div>
+          <div class="portfolio-item video-card reveal reveal-delay-2" data-category="ugc" data-label="UGC — Bushido Studio" data-video-src="assets/videos/UGC_03.mp4">
+            <img src="assets/videos/posters/UGC_03.jpg" alt="Aperçu vidéo UGC" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">UGC</div>
+          </div>
+          <div class="portfolio-item video-card reveal reveal-delay-3" data-category="unboxing" data-label="Unboxing — Bushido Studio" data-video-src="assets/videos/Unboxing_01.mp4">
+            <img src="assets/videos/posters/Unboxing_01.jpg" alt="Aperçu vidéo Unboxing" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">Unboxing</div>
+          </div>
+          <div class="portfolio-item video-card reveal" data-category="unboxing" data-label="Unboxing — Bushido Studio" data-video-src="assets/videos/Unboxing_02.mp4">
+            <img src="assets/videos/posters/Unboxing_02.jpg" alt="Aperçu vidéo Unboxing" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">Unboxing</div>
+          </div>
+          <div class="portfolio-item video-card reveal reveal-delay-1" data-category="demonstration" data-label="Démonstration — Bushido Studio" data-video-src="assets/videos/Demo_01.mp4">
+            <img src="assets/videos/posters/Demo_01.jpg" alt="Aperçu vidéo Démonstration" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">Démonstration</div>
+          </div>
+          <div class="portfolio-item video-card reveal reveal-delay-2" data-category="demonstration" data-label="Démonstration — Bushido Studio" data-video-src="assets/videos/Demo_02.mp4">
+            <img src="assets/videos/posters/Demo_02.jpg" alt="Aperçu vidéo Démonstration" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">Démonstration</div>
+          </div>
+          <div class="portfolio-item video-card reveal reveal-delay-3" data-category="storytelling" data-label="Storytelling — Bushido Studio" data-video-src="assets/videos/Storytelling_01.mp4">
+            <img src="assets/videos/posters/Storytelling_01.jpg" alt="Aperçu vidéo Storytelling" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">Storytelling</div>
+          </div>
+          <div class="portfolio-item video-card reveal" data-category="asmr" data-label="ASMR — Bushido Studio" data-video-src="assets/videos/ASMR_01.mp4">
+            <img src="assets/videos/posters/ASMR_01.jpg" alt="Aperçu vidéo ASMR" loading="lazy" class="video-poster" />
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="play-btn w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 text-[10px] font-semibold uppercase tracking-wide z-10 pointer-events-none">ASMR</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         7. PROCESS EN 3 ÉTAPES
+    ============================================================= -->
+    <section id="process" class="py-16 sm:py-24 bg-bushido-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Un process d'une simplicité redoutable
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6 sm:gap-8">
+          <div class="reveal premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-7">
+            <span class="font-heading font-extrabold text-5xl text-bushido-red/30">01</span>
+            <h3 class="font-heading font-bold text-lg mt-4 mb-2">Remplis le brief</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Tu remplis notre formulaire, affiné après plus de 6&nbsp;000 vidéos UGC produites. En quelques minutes, on a tout ce qu'il faut sur ton produit, ta cible et ton angle.</p>
+          </div>
+          <div class="reveal reveal-delay-1 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-7">
+            <span class="font-heading font-extrabold text-5xl text-bushido-red/30">02</span>
+            <h3 class="font-heading font-bold text-lg mt-4 mb-2">Scripts &amp; mannequins</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Dès réception, on étudie ton produit, ta niche et tes concurrents, on définit ton client idéal et les angles qui convertissent, puis on rédige le script. Sous 12h, on te propose tes mannequins IA et les scripts de ta vidéo, qu'on valide ensemble.</p>
+          </div>
+          <div class="reveal reveal-delay-2 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-7">
+            <span class="font-heading font-extrabold text-5xl text-bushido-red/30">03</span>
+            <h3 class="font-heading font-bold text-lg mt-4 mb-2">Production &amp; livraison</h3>
+            <p class="text-sm text-bushido-gray leading-relaxed">Une fois validés, notre process IA et notre post-production maison génèrent tes vidéos UGC ultra-réalistes. Tu valides ou demandes une retouche (incluse), puis on te livre tes vidéos prêtes à diffuser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         8. TÉMOIGNAGES
+    ============================================================= -->
+    <section id="temoignages" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="reveal flex items-end justify-between mb-10 gap-4 flex-wrap">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Ils nous font confiance
+          </h2>
+          <div class="flex gap-2">
+            <button id="testimonials-prev" aria-label="Précédent" class="w-10 h-10 rounded-full border border-white/15 hover:border-bushido-red flex items-center justify-center transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button id="testimonials-next" aria-label="Suivant" class="w-10 h-10 rounded-full border border-white/15 hover:border-bushido-red flex items-center justify-center transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="testimonials-track" class="reveal flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0" style="scrollbar-width: none;">
+          <!-- Étoiles en SVG + avatar initiale : à remplacer par les logos clients si tu en as -->
+          <div class="testimonial-card premium-card spotlight shrink-0 w-[280px] sm:w-[340px] rounded-2xl bg-bushido-card border border-white/10 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex gap-0.5 mb-3.5" aria-label="5 étoiles sur 5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+              </div>
+              <p class="text-sm leading-relaxed text-white/90">"Corneille a pris le temps de comprendre l'univers et l'identité de ma marque. Le résultat est très qualitatif, soigné et fidèle. Je recommande sans hésiter."</p>
+            </div>
+            <div class="mt-5 flex items-center gap-3">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-bushido-red/15 border border-bushido-red/30 flex items-center justify-center font-heading font-bold text-xs text-bushido-red">S</span>
+              <p class="text-xs font-semibold text-bushido-gray">Stéphanie, marque de bracelets (Paris)</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card premium-card spotlight shrink-0 w-[280px] sm:w-[340px] rounded-2xl bg-bushido-card border border-white/10 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex gap-0.5 mb-3.5" aria-label="5 étoiles sur 5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+              </div>
+              <p class="text-sm leading-relaxed text-white/90">"Le résultat est impressionnant et vous maîtrisez parfaitement votre sujet."</p>
+            </div>
+            <div class="mt-5 flex items-center gap-3">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-bushido-red/15 border border-bushido-red/30 flex items-center justify-center font-heading font-bold text-xs text-bushido-red">M</span>
+              <p class="text-xs font-semibold text-bushido-gray">Manager, marque de compléments alimentaires</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card premium-card spotlight shrink-0 w-[280px] sm:w-[340px] rounded-2xl bg-bushido-card border border-white/10 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex gap-0.5 mb-3.5" aria-label="5 étoiles sur 5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+              </div>
+              <p class="text-sm leading-relaxed text-white/90">"Il s'adapte et propose même ses idées, une vraie compétence. C'était pour des vidéos ads, je suis ravi."</p>
+            </div>
+            <div class="mt-5 flex items-center gap-3">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-bushido-red/15 border border-bushido-red/30 flex items-center justify-center font-heading font-bold text-xs text-bushido-red">JN</span>
+              <p class="text-xs font-semibold text-bushido-gray">Jean-Noël, CEO de startup (Berlin)</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card premium-card spotlight shrink-0 w-[280px] sm:w-[340px] rounded-2xl bg-bushido-card border border-white/10 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex gap-0.5 mb-3.5" aria-label="5 étoiles sur 5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+              </div>
+              <p class="text-sm leading-relaxed text-white/90">"Très pro et respectueux, merci pour votre implication."</p>
+            </div>
+            <div class="mt-5 flex items-center gap-3">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-bushido-red/15 border border-bushido-red/30 flex items-center justify-center font-heading font-bold text-xs text-bushido-red">A</span>
+              <p class="text-xs font-semibold text-bushido-gray">Alecom, marque e-commerce</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card premium-card spotlight shrink-0 w-[280px] sm:w-[340px] rounded-2xl bg-bushido-card border border-white/10 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex gap-0.5 mb-3.5" aria-label="5 étoiles sur 5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#E10600"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.3 1.3-6.6L2.5 9.1l6.6-.8L12 2z"/></svg>
+              </div>
+              <p class="text-sm leading-relaxed text-white/90">"Non seulement une très bonne personne, mais il ne ménage pas ses efforts et propose des idées. Très satisfait, je recommande fortement."</p>
+            </div>
+            <div class="mt-5 flex items-center gap-3">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-bushido-red/15 border border-bushido-red/30 flex items-center justify-center font-heading font-bold text-xs text-bushido-red">L</span>
+              <p class="text-xs font-semibold text-bushido-gray">Liam, Media Buyer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline sabre"></div></div>
+
+    <!-- ============================================================
+         9. TARIFS
+    ============================================================= -->
+    <section id="tarifs" class="py-16 sm:py-24 bg-bushido-card/40 section-glow">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-4">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Du contenu UGC de niveau agence, pour une fraction du prix.
+          </h2>
+          <p class="mt-4 text-bushido-gray text-base leading-relaxed">
+            Le coût moyen d'une vidéo UGC créateur est de <span class="line-through">~$100</span>.
+            Nos packs démarrent à <span class="text-bushido-red font-bold">$50</span>.
+          </p>
+          <p class="mt-3 inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-bushido-red">
+            <span class="w-2 h-2 rounded-full bg-bushido-red pulse-dot"></span> Plus que 5 places disponibles cette semaine
+          </p>
+        </div>
+
+        <!-- Les 3 boutons "Commander" pointent vers le MÊME lien de paiement Chariow (phase de test).
+             En production, crée un produit Chariow par pack et mets son lien propre sur chaque carte. -->
+        <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mt-12 items-start">
+          <!-- Carte 1 -->
+          <div class="reveal premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-7 sm:p-8 flex flex-col h-full">
+            <h3 class="font-heading font-bold text-xl">Starter Créa</h3>
+            <p class="text-sm text-bushido-gray mt-2 mb-6">Parfait pour tester un premier angle publicitaire.</p>
+            <p class="font-heading font-extrabold text-4xl mb-6">$50</p>
+            <ul class="space-y-3 text-sm text-white/90 mb-8 flex-1">
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 1 vidéo publicitaire générée par IA</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Durée 30–60s</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 1 angle marketing</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 1 format au choix</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Rédaction du script incluse</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Optimisé Facebook / TikTok / Instagram Ads</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 1 retouche incluse</li>
+            </ul>
+            <a href="https://hxuzbsqa.mychariow.online/prd_u0fvjj6k/checkout"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-white/20 hover:border-white/50 text-white font-semibold text-sm transition-colors">
+              Commander
+            </a>
+          </div>
+
+          <!-- Carte 2 — populaire -->
+          <div class="reveal reveal-delay-1 premium-card spotlight pricing-popular relative rounded-2xl bg-bushido-black border-2 border-bushido-red p-7 sm:p-8 flex flex-col h-full">
+            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-bushido-red text-xs font-bold whitespace-nowrap">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                <path d="M12 2.5c.4 3.2-1.7 4.6-2.9 6.1C7.8 10.3 7 11.7 7 13.6a5 5 0 0 0 10 0c0-2.1-1.1-3.6-2.2-4.9-.4 1-1 1.6-1.8 2 .5-2.9-.6-6.2-1-8.2z"/>
+              </svg>
+              Le plus populaire
+            </span>
+            <h3 class="font-heading font-bold text-xl mt-2">Speed Testing</h3>
+            <p class="text-sm text-bushido-gray mt-2 mb-6">Pour trouver ton angle gagnant.</p>
+            <p class="font-heading font-extrabold text-4xl mb-6">$150</p>
+            <ul class="space-y-3 text-sm text-white/90 mb-8 flex-1">
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 3 vidéos publicitaires générées par IA</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Durée 30–60s</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 3 angles marketing</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 3 formats au choix</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Rédaction du script incluse</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Optimisé Facebook / TikTok / Instagram Ads</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 1 retouche incluse</li>
+              <li class="flex gap-2 items-start">
+                <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="8.5" width="18" height="12.5" rx="2"/><path d="M3 13h18M12 8.5V21"/>
+                  <path d="M12 8.5S10.6 3.5 8.2 3.5a2.4 2.4 0 0 0 0 5H12zM12 8.5s1.4-5 3.8-5a2.4 2.4 0 0 1 0 5H12z"/>
+                </svg>
+                Bonus : Playbook des Créatives Gagnantes
+              </li>
+            </ul>
+            <a href="https://hxuzbsqa.mychariow.online/prd_rwir1ggj/checkout"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm transition-colors">
+              Commander
+            </a>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="reveal reveal-delay-2 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 p-7 sm:p-8 flex flex-col h-full">
+            <h3 class="font-heading font-bold text-xl">Scaling Ecosystem</h3>
+            <p class="text-sm text-bushido-gray mt-2 mb-6">Pour scaler ce qui marche.</p>
+            <p class="font-heading font-extrabold text-4xl mb-6">$500</p>
+            <ul class="space-y-3 text-sm text-white/90 mb-8 flex-1">
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 10 vidéos publicitaires générées par IA</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Durée 30–60s</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Plusieurs angles marketing (pour multiplier tes tests)</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Formats au choix</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Rédaction du script incluse</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> Optimisé Facebook / TikTok / Instagram Ads</li>
+              <li class="flex gap-2"><span class="text-bushido-red">✓</span> 1 retouche incluse</li>
+              <li class="flex gap-2 items-start">
+                <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="8.5" width="18" height="12.5" rx="2"/><path d="M3 13h18M12 8.5V21"/>
+                  <path d="M12 8.5S10.6 3.5 8.2 3.5a2.4 2.4 0 0 0 0 5H12zM12 8.5s1.4-5 3.8-5a2.4 2.4 0 0 1 0 5H12z"/>
+                </svg>
+                Bonus : Playbook des Créatives Gagnantes
+              </li>
+            </ul>
+            <a href="https://hxuzbsqa.mychariow.online/prd_83lha260/checkout"
+              class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-white/20 hover:border-white/50 text-white font-semibold text-sm transition-colors">
+              Commander
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="reveal max-w-4xl mx-auto px-4 sm:px-6 -mt-4 sm:-mt-8 mb-4">
+      <div class="premium-card rounded-2xl bg-bushido-card border border-white/10 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+        <div>
+          <h3 class="font-heading font-bold text-lg sm:text-xl">Pas sûr du pack qu'il te faut ?</h3>
+          <p class="text-bushido-gray text-sm mt-1">Écris-nous sur WhatsApp — on te conseille et on peut caler un appel.</p>
+        </div>
+        <a href="https://wa.me/2290192483107?text=Bonjour%20Bushido%20Studio%2C%20j'ai%20une%20question%20sur%20vos%20vid%C3%A9os%20UGC%20et%20j'aimerais%20r%C3%A9server%20un%20appel." target="_blank" rel="noopener"
+          class="shrink-0 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-white font-semibold text-sm sm:text-base transition-transform hover:scale-[1.03] shadow-lg"
+          style="background-color:#25D366;box-shadow:0 10px 30px rgba(37,211,102,.25)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.02a9.44 9.44 0 01-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 01-1.44-5.02c0-5.21 4.25-9.45 9.47-9.45 2.53 0 4.9.99 6.69 2.78a9.4 9.4 0 012.77 6.68c0 5.21-4.25 9.45-9.47 9.45zM20.3 3.7A11.36 11.36 0 0012.05.28C5.8.28.72 5.36.72 11.6c0 2 .52 3.95 1.52 5.67L.63 23.2l6.07-1.59a11.34 11.34 0 005.35 1.36h.01c6.24 0 11.32-5.08 11.33-11.32a11.27 11.27 0 00-3.09-7.95z"/></svg>
+          Discuter sur WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         10. GARANTIE
+    ============================================================= -->
+    <section id="garantie" class="py-14 sm:py-20">
+      <div class="reveal max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="premium-card spotlight rounded-2xl bg-gradient-to-r from-bushido-red/15 to-transparent border border-bushido-red/30 p-7 sm:p-10 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+          <div class="w-16 h-16 shrink-0 rounded-full bg-bushido-red/20 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="1.75" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl mb-2">Satisfaction garantie</h3>
+            <p class="text-bushido-gray text-sm sm:text-base leading-relaxed">
+              Chaque vidéo inclut une retouche, et on retravaille jusqu'à ce que le rendu soit parfait.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         11. ÉQUIPE
+    ============================================================= -->
+    <section id="equipe" class="py-16 sm:py-24 bg-bushido-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-4">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Rencontre l'équipe derrière Bushido Studio
+          </h2>
+          <p class="mt-4 text-bushido-gray text-sm sm:text-base leading-relaxed">
+            Une équipe qui a produit +6 000 vidéos pour +140 marques, obsédée par un seul objectif :
+            un rendu si réaliste qu'on le confond avec un vrai tournage.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mt-12">
+          <div class="reveal premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 overflow-hidden">
+            <img src="assets/team/Corneille.jpg" alt="Corneille — CEO & IA Creative Strategist" loading="lazy" class="w-full aspect-[4/5] object-cover" />
+            <div class="p-5 text-center">
+              <h3 class="font-heading font-bold text-base">Corneille</h3>
+              <p class="text-xs text-bushido-red font-semibold mt-1">CEO &amp; IA Creative Strategist</p>
+              <p class="text-xs text-bushido-gray/80 mt-2 leading-snug">Pilote la vision créative de Bushido, de la stratégie au rendu final.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-1 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 overflow-hidden">
+            <img src="assets/team/Regis.jpg" alt="Régis — Monteur Vidéo" loading="lazy" class="w-full aspect-[4/5] object-cover" />
+            <div class="p-5 text-center">
+              <h3 class="font-heading font-bold text-base">Régis</h3>
+              <p class="text-xs text-bushido-red font-semibold mt-1">Monteur Vidéo</p>
+              <p class="text-xs text-bushido-gray/80 mt-2 leading-snug">Transforme les rushes en créatives scroll-stopping.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 overflow-hidden">
+            <img src="assets/team/Arafath.jpg" alt="Arafath — Co-CEO & Copywriter" loading="lazy" class="w-full aspect-[4/5] object-cover" />
+            <div class="p-5 text-center">
+              <h3 class="font-heading font-bold text-base">Arafath</h3>
+              <p class="text-xs text-bushido-red font-semibold mt-1">Co-CEO &amp; Copywriter</p>
+              <p class="text-xs text-bushido-gray/80 mt-2 leading-snug">Aligne stratégie et copy pour des pubs qui performent.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-3 premium-card spotlight rounded-2xl bg-bushido-black border border-white/10 overflow-hidden">
+            <img src="assets/team/Alexandre.jpg" alt="Alexandre — Copywriter" loading="lazy" class="w-full aspect-[4/5] object-cover" />
+            <div class="p-5 text-center">
+              <h3 class="font-heading font-bold text-base">Alexandre</h3>
+              <p class="text-xs text-bushido-red font-semibold mt-1">Copywriter</p>
+              <p class="text-xs text-bushido-gray/80 mt-2 leading-snug">Façonne chaque script pour capter l'attention dès la première seconde.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         12. ÉTUDES DE CAS
+    ============================================================= -->
+    <section id="etudes-de-cas" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">Études de cas</h2>
+          <p class="mt-4 text-bushido-gray text-sm sm:text-base">Des marques qui nous ont fait confiance — clique pour lire chaque histoire en détail.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="etudes-de-cas/koty.html" target="_blank" rel="noopener" class="reveal spotlight group rounded-2xl bg-bushido-card border border-white/10 hover:border-bushido-red/60 overflow-hidden flex flex-col transition-colors">
+            <div class="relative aspect-video overflow-hidden">
+              <img src="assets/videos/posters/Koty_01.jpg" alt="Koty" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-[11px] font-semibold text-bushido-red uppercase tracking-wide mb-1">E-commerce multi-boutiques</p>
+              <h3 class="font-heading font-bold text-lg">Koty</h3>
+              <p class="text-sm text-bushido-gray mt-2 leading-relaxed flex-1">Nous a confié la création vidéo de tous ses produits.</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-bushido-red transition-colors">Voir l'étude de cas
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="etudes-de-cas/jeannoel.html" target="_blank" rel="noopener" class="reveal reveal-delay-1 spotlight group rounded-2xl bg-bushido-card border border-white/10 hover:border-bushido-red/60 overflow-hidden flex flex-col transition-colors">
+            <div class="relative aspect-video overflow-hidden">
+              <img src="assets/videos/posters/Jeannoel_02.jpg" alt="Jeannoel" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-[11px] font-semibold text-bushido-red uppercase tracking-wide mb-1">Leggings de grossesse</p>
+              <h3 class="font-heading font-bold text-lg">Jeannoel</h3>
+              <p class="text-sm text-bushido-gray mt-2 leading-relaxed flex-1">Sa publicité TikTok Ads a tout simplement cartonné.</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-bushido-red transition-colors">Voir l'étude de cas
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="etudes-de-cas/mady-beauty.html" target="_blank" rel="noopener" class="reveal reveal-delay-2 spotlight group rounded-2xl bg-bushido-card border border-white/10 hover:border-bushido-red/60 overflow-hidden flex flex-col transition-colors">
+            <div class="relative aspect-video overflow-hidden">
+              <img src="assets/videos/posters/Mady_01.jpg" alt="Mady Beauty" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-[11px] font-semibold text-bushido-red uppercase tracking-wide mb-1">Soin du visage · Cosmétique</p>
+              <h3 class="font-heading font-bold text-lg">Mady Beauty</h3>
+              <p class="text-sm text-bushido-gray mt-2 leading-relaxed flex-1">Convaincue dès la 1re vidéo, elle a commandé la suite.</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-bushido-red transition-colors">Voir l'étude de cas
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="etudes-de-cas/robin.html" target="_blank" rel="noopener" class="reveal spotlight group rounded-2xl bg-bushido-card border border-white/10 hover:border-bushido-red/60 overflow-hidden flex flex-col transition-colors">
+            <div class="relative aspect-video overflow-hidden">
+              <img src="assets/videos/posters/Robin_01.jpg" alt="Robin" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-[11px] font-semibold text-bushido-red uppercase tracking-wide mb-1">Animalerie · Marché US</p>
+              <h3 class="font-heading font-bold text-lg">Robin</h3>
+              <p class="text-sm text-bushido-gray mt-2 leading-relaxed flex-1">4 vidéos dès la 1re semaine, et toutes ses créatives depuis.</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-bushido-red transition-colors">Voir l'étude de cas
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="etudes-de-cas/karl.html" target="_blank" rel="noopener" class="reveal reveal-delay-1 spotlight group rounded-2xl bg-bushido-card border border-white/10 hover:border-bushido-red/60 overflow-hidden flex flex-col transition-colors">
+            <div class="relative aspect-video overflow-hidden">
+              <img src="assets/videos/posters/Karl_01.jpg" alt="Karl" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-[11px] font-semibold text-bushido-red uppercase tracking-wide mb-1">Studio SaaS</p>
+              <h3 class="font-heading font-bold text-lg">Karl</h3>
+              <p class="text-sm text-bushido-gray mt-2 leading-relaxed flex-1">+9 000 téléchargements sur deux apps.</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-bushido-red transition-colors">Voir l'étude de cas
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline"></div></div>
+
+    <!-- ============================================================
+         13. BONUS EXCLUSIF
+    ============================================================= -->
+    <section id="bonus" class="py-16 sm:py-20 bg-bushido-card/40">
+      <div class="reveal max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="premium-card spotlight rounded-2xl bg-bushido-black border border-bushido-red/30 p-7 sm:p-10 text-center">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bushido-red/15 text-bushido-red text-xs font-bold uppercase tracking-wide mb-5">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="8.5" width="18" height="12.5" rx="2"/><path d="M3 13h18M12 8.5V21"/>
+              <path d="M12 8.5S10.6 3.5 8.2 3.5a2.4 2.4 0 0 0 0 5H12zM12 8.5s1.4-5 3.8-5a2.4 2.4 0 0 1 0 5H12z"/>
+            </svg>
+            Bonus exclusif
+          </span>
+          <h3 class="font-heading font-extrabold text-2xl sm:text-3xl mb-3">Le Playbook des Créatives Gagnantes</h3>
+          <p class="text-bushido-gray text-sm sm:text-base mb-6">Offert avec les packs Speed Testing &amp; Scaling Ecosystem.</p>
+          <ul class="inline-flex flex-col items-start gap-2 text-sm sm:text-base text-white/90 text-left">
+            <li class="flex gap-2"><span class="text-bushido-red">✓</span> Les hooks qui performent en 2026</li>
+            <li class="flex gap-2"><span class="text-bushido-red">✓</span> Comment structurer une UGC qui convertit</li>
+            <li class="flex gap-2"><span class="text-bushido-red">✓</span> Les erreurs qui tuent ton ROAS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="hairline sabre"></div></div>
+
+    <!-- ============================================================
+         14. FAQ
+    ============================================================= -->
+    <section id="faq" class="py-16 sm:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center mb-12">
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">Questions fréquentes</h2>
+        </div>
+
+        <div class="space-y-3">
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">Pour qui est ce service ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                Pour les marques e-commerce (DTC, dropshipping, marques établies) qui veulent des créatives publicitaires UGC à grande échelle, sans les contraintes d'un tournage classique : casting, logistique, délais.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">Comment l'IA garde-t-elle un rendu ultra-réaliste ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                On combine plusieurs technologies de génération vidéo IA de pointe avec un process de post-production maison (lumière, mouvement, voix, montage) pour éliminer les artefacts typiques de l'IA et obtenir un rendu proche d'un vrai tournage.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">En combien de temps livrez-vous ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                48h en moyenne à réception de ton brief complet (produit, cible, angle).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">Quels formats de vidéo proposez-vous ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                UGC classique, unboxing, ASMR produit, démonstration, storytelling — au format vertical 9:16 optimisé pour Meta et TikTok Ads.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">Combien de retouches sont incluses ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                Chaque vidéo inclut une retouche. On ajuste le script, le ton ou le montage jusqu'à validation.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">Quelle différence avec un créateur UGC classique ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                Pas de casting, pas de délai de tournage, pas de dépendance aux disponibilités d'un créateur. Tu peux tester 10x plus d'angles pour une fraction du prix, avec un rendu tout aussi crédible.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">Est-ce que je possède les droits d'usage des vidéos ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                Oui. Une fois la commande livrée et validée, tu détiens les droits d'utilisation illimités sur tes campagnes publicitaires et réseaux sociaux.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal premium-card rounded-xl bg-bushido-card border border-white/10 overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-5 sm:px-6 py-5">
+              <span class="font-semibold text-sm sm:text-base">C'est quoi l'histoire de Bushido Studio ?</span>
+              <svg class="faq-chevron shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6">
+              <p class="text-sm text-bushido-gray leading-relaxed pb-5">
+                Bushido Studio est né du constat que les marques e-commerce perdent un temps et un budget considérables à produire du contenu UGC classique. Notre équipe a développé un process IA unique pour livrer des créatives ultra-réalistes, rapides et scalables — avec la même discipline et la même exigence qu'un art martial : précision, maîtrise, répétition.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal mt-10 text-center">
+          <a href="#tarifs" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm sm:text-base transition-colors">
+            Voir les tarifs
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       15. FOOTER
+  ============================================================= -->
+  <footer class="border-t border-white/5 pt-14 sm:pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <a href="#" aria-label="Bushido Studio — retour en haut" class="inline-flex items-center">
+            <img src="assets/logo-bushido-blanc.png" alt="Bushido Studio"
+              width="460" height="110" class="h-8 w-auto" />
+          </a>
+          <p class="text-sm text-bushido-gray mt-4 leading-relaxed max-w-xs">
+            Vidéos publicitaires UGC ultra-réalistes générées par IA pour les marques e-commerce. Sans casting, sans tournage. Livrées en 48h.
+          </p>
+          <div class="flex gap-3 mt-5">
+            <a href="https://www.instagram.com/bushi_do90/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-full bg-bushido-card border border-white/10 hover:border-bushido-red flex items-center justify-center transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/corneille-adekambi-34ab53233/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-bushido-card border border-white/10 hover:border-bushido-red flex items-center justify-center transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.65h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21h-4z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wide text-white/70 mb-4">Navigation</h4>
+          <ul class="space-y-2.5 text-sm text-bushido-gray">
+            <li><a href="#realisations" class="hover:text-white transition-colors">Réalisations</a></li>
+            <li><a href="#process" class="hover:text-white transition-colors">Comment ça marche</a></li>
+            <li><a href="#etudes-de-cas" class="hover:text-white transition-colors">Études de cas</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wide text-white/70 mb-4">Ressources</h4>
+          <ul class="space-y-2.5 text-sm text-bushido-gray">
+            <li><a href="#tarifs" class="hover:text-white transition-colors">Tarifs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wide text-white/70 mb-4">Contact</h4>
+          <ul class="space-y-2.5 text-sm text-bushido-gray">
+            <li><a href="mailto:corneillevideo@gmail.com" class="hover:text-white transition-colors">corneillevideo@gmail.com</a></li>
+            <li><a href="https://wa.me/2290192483107?text=Bonjour%20Bushido%20Studio%2C%20j'aimerais%20r%C3%A9server%20un%20appel." target="_blank" rel="noopener" class="hover:text-white transition-colors">Réserver un appel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-bushido-gray/70">
+        <p>© 2026 Bushido Studio. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BARRE CTA MOBILE (visible après le hero)
+  ============================================================= -->
+  <div id="mobile-cta" class="lg:hidden fixed bottom-0 inset-x-0 z-40 px-4 pt-3 bg-bushido-black/95 backdrop-blur border-t border-white/10">
+    <div class="flex items-center gap-3">
+      <div class="min-w-0">
+        <p class="text-[11px] text-bushido-gray leading-tight flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-bushido-red pulse-dot"></span> Plus que 5 places cette semaine
+        </p>
+        <p class="font-heading font-bold text-sm leading-tight mt-0.5">À partir de $50</p>
+      </div>
+      <a href="#tarifs" class="ml-auto shrink-0 inline-flex items-center justify-center px-5 py-3 rounded-lg bg-bushido-red hover:bg-bushido-red-hover text-white font-semibold text-sm transition-colors">
+        Voir les tarifs
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       LIGHTBOX VIDÉO (placeholder)
+  ============================================================= -->
+  <div id="video-lightbox-overlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85">
+    <div class="relative w-full max-w-sm aspect-[9/16] rounded-2xl bg-bushido-card border border-white/10 flex items-center justify-center overflow-hidden">
+      <button id="video-lightbox-close" aria-label="Fermer" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 flex items-center justify-center text-white hover:bg-black/80 transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg>
+      </button>
+      <div id="video-lightbox-content" class="w-full h-full flex items-center justify-center"></div>
+    </div>
+  </div>
+
+  <!-- Toast copie -->
+  <div id="copy-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-lg bg-white text-bushido-black text-sm font-semibold shadow-2xl"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

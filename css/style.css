@@ -1,0 +1,431 @@
+/* ==========================================================================
+   Bushido Studio — Styles personnalisés (en complément de Tailwind CDN)
+   Sommaire :
+   1.  Variables & base
+   2.  Grain filmique (texture du fond)
+   3.  Animations au scroll
+   4.  Profondeur des cartes (liseré + spotlight curseur)
+   5.  Séparateurs "coup de sabre"
+   6.  Bandeau marquee
+   7.  Header / menu mobile
+   8.  Cartes vidéo
+   9.  Portfolio, comparaison, tarifs
+   10. FAQ, pop-up, lightbox, toast
+   11. Barre CTA mobile
+   12. Accessibilité (reduced motion)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES & BASE
+   -------------------------------------------------------------------------- */
+:root {
+  --bushido-red: #E10600;
+  --bushido-red-hover: #B00500;
+  --bushido-black: #0A0A0A;
+  --bushido-card: #141414;
+  --bushido-white: #FFFFFF;
+  --bushido-gray: #A1A1A1;
+}
+
+/* Permet d'animer l'intensité du spotlight au survol (fallback : bascule immédiate) */
+@property --spot {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Décalage du scroll pour ne pas passer sous le header sticky */
+section[id],
+div[id] {
+  scroll-margin-top: 96px;
+}
+
+body {
+  background-color: var(--bushido-black);
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5,
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+/* Chiffres à chasse fixe : évite le tremblement des compteurs animés */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scrollbar discrète sur fond noir */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bushido-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bushido-red);
+}
+
+/* --------------------------------------------------------------------------
+   2. GRAIN FILMIQUE
+   Couche fixe très légère qui casse la platitude du noir pur.
+   z-index 30 : au-dessus du contenu, sous le header (40) et les modales (50).
+   -------------------------------------------------------------------------- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
+/* --------------------------------------------------------------------------
+   3. ANIMATIONS AU SCROLL (fade-in / slide-up)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1.is-visible { transition-delay: 0.08s; }
+.reveal-delay-2.is-visible { transition-delay: 0.16s; }
+.reveal-delay-3.is-visible { transition-delay: 0.24s; }
+.reveal-delay-4.is-visible { transition-delay: 0.32s; }
+
+/* Badge urgence clignotant discret */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   4. PROFONDEUR DES CARTES
+   .premium-card : liseré lumineux sur l'arête supérieure.
+   .spotlight    : halo rouge qui suit le curseur (variables posées en JS).
+   -------------------------------------------------------------------------- */
+.premium-card {
+  position: relative;
+}
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18%;
+  right: 18%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  pointer-events: none;
+}
+
+.spotlight {
+  background-image: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, -20%),
+    rgba(225, 6, 0, var(--spot, 0)),
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  transition: --spot 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+.spotlight:hover {
+  --spot: 0.16;
+}
+
+/* Halo diffus derrière les sections clés */
+.section-glow {
+  position: relative;
+  isolation: isolate;
+}
+.section-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(900px, 90%);
+  height: 340px;
+  transform: translate(-50%, -40%);
+  background: radial-gradient(ellipse at center, rgba(225, 6, 0, 0.13), transparent 70%);
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --------------------------------------------------------------------------
+   5. SÉPARATEURS "COUP DE SABRE"
+   .hairline       : filet dégradé discret entre deux sections.
+   .hairline.sabre : ajoute la lame rouge en diagonale (transitions clés).
+   -------------------------------------------------------------------------- */
+.hairline {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.09) 22%,
+    rgba(255, 255, 255, 0.09) 78%,
+    transparent
+  );
+}
+.hairline.sabre::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 2px;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(-32deg);
+  background: linear-gradient(90deg, transparent, var(--bushido-red) 45%, #ff6b63 60%, transparent);
+  box-shadow: 0 0 16px rgba(225, 6, 0, 0.65);
+}
+
+/* --------------------------------------------------------------------------
+   6. BANDEAU MARQUEE (défilement continu)
+   Le track contient deux groupes identiques : translateX(-50%) boucle sans saut.
+   -------------------------------------------------------------------------- */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  padding-right: 2.25rem;
+}
+.marquee-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  white-space: nowrap;
+}
+.marquee-item.accent {
+  color: #fff;
+}
+/* Petite lame rouge en guise de séparateur */
+.marquee-sep {
+  display: block;
+  width: 2px;
+  height: 15px;
+  border-radius: 2px;
+  background: var(--bushido-red);
+  transform: rotate(22deg);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. HEADER / MENU MOBILE
+   -------------------------------------------------------------------------- */
+header.scrolled {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  background-color: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+#mobile-menu.open {
+  max-height: 480px;
+}
+
+/* --------------------------------------------------------------------------
+   8. CARTES VIDÉO (placeholders 9:16)
+   -------------------------------------------------------------------------- */
+.video-card {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #121212;
+  background-image: linear-gradient(155deg, #1c1c1c 0%, #0d0d0d 100%);
+  border: 1px solid #232323;
+  cursor: pointer;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.video-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--bushido-red);
+  box-shadow: 0 20px 40px rgba(225, 6, 0, 0.18);
+}
+.video-card .play-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.video-card:hover .play-btn {
+  transform: scale(1.12);
+  background-color: var(--bushido-red);
+}
+/* Aperçu vidéo injecté au survol (voir js/script.js) */
+.video-card video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   9. PORTFOLIO / COMPARAISON / TARIFS
+   -------------------------------------------------------------------------- */
+.portfolio-item {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.portfolio-item.hidden-item {
+  display: none;
+}
+
+.compare-highlight {
+  box-shadow: 0 0 0 1px rgba(225, 6, 0, 0.35), 0 30px 60px rgba(225, 6, 0, 0.12);
+}
+
+.pricing-popular {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 1px rgba(225, 6, 0, 0.5), 0 30px 70px rgba(225, 6, 0, 0.2);
+}
+@media (max-width: 767px) {
+  .pricing-popular {
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. FAQ / POP-UP / LIGHTBOX / TOAST
+   -------------------------------------------------------------------------- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-item.open .faq-answer {
+  max-height: 400px;
+}
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+.faq-chevron {
+  transition: transform 0.3s ease;
+}
+
+#email-popup-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+#email-popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+#email-popup-box {
+  transform: translateY(24px) scale(0.98);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+#email-popup-overlay.active #email-popup-box {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+#video-lightbox-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#video-lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#copy-toast {
+  transform: translateY(16px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#copy-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Carrousel témoignages */
+#testimonials-track {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+#testimonials-track .testimonial-card {
+  scroll-snap-align: start;
+}
+
+/* --------------------------------------------------------------------------
+   11. BARRE CTA MOBILE (apparaît après le hero, se cache sur les tarifs/footer)
+   -------------------------------------------------------------------------- */
+#mobile-cta {
+  transform: translateY(120%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+#mobile-cta.visible {
+  transform: translateY(0);
+}
+
+/* Texte en dégradé pour les mots clés */
+.text-gradient-red {
+  background: linear-gradient(90deg, #E10600, #ff5a52);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   12. ACCESSIBILITÉ — respect de "réduire les animations"
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .marquee-track { animation: none !important; }
+  .pulse-dot { animation: none !important; }
+  .video-card:hover { transform: none; }
+}
+
+
+/* Vignettes (posters) des cartes vidéo — chargées en lazy, la vidéo au survol passe au-dessus */
+.video-card .video-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-card video { z-index: 2; }
